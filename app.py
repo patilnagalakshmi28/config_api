@@ -30,7 +30,7 @@ def get_redis_client():
 
 def handle_post(event):
     body = json.loads(event['body'])
-    config_key = body.get('config_key')
+    config_key =str(body.get('config_key'))
     config_value = body.get('config_value')
 
     if not config_key or not config_value:
